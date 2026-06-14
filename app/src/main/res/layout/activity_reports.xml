@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <!-- Header -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Reports and Analytics"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            android:textColor="@color/textPrimary" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Track your spending habits"
+            android:textColor="@color/textSecondary"
+            android:layout_marginBottom="20dp"/>
+
+        <!-- Summary Cards -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_weight="1"
+                android:layout_marginEnd="6dp"
+                android:background="@drawable/card_background"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:text="Budget"
+                    android:textColor="@color/textSecondary"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:id="@+id/tvBudget"
+                    android:text="R0"
+                    android:textStyle="bold"
+                    android:textSize="18sp"
+                    android:textColor="@color/textPrimary"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_weight="1"
+                android:layout_marginHorizontal="3dp"
+                android:background="@drawable/card_background"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:text="Spent"
+                    android:textColor="@color/textSecondary"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:id="@+id/tvSpent"
+                    android:text="R0"
+                    android:textStyle="bold"
+                    android:textSize="18sp"
+                    android:textColor="@color/textPrimary"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_weight="1"
+                android:layout_marginStart="6dp"
+                android:background="@drawable/card_background"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:text="Remaining"
+                    android:textColor="@color/textSecondary"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:id="@+id/tvRemaining"
+                    android:text="R0"
+                    android:textStyle="bold"
+                    android:textSize="18sp"
+                    android:textColor="@color/textPrimary"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- Status -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/card_background"
+            android:padding="16dp"
+            android:layout_marginTop="20dp">
+
+            <TextView
+                android:id="@+id/tvStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Status"
+                android:textStyle="bold"
+                android:textColor="@color/textPrimary"/>
+        </LinearLayout>
+
+        <!-- Pie Chart -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Spending Breakdown"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/textPrimary"
+            android:layout_marginTop="24dp"/>
+
+        <com.github.mikephil.charting.charts.PieChart
+            android:id="@+id/pieChart"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_marginTop="10dp"/>
+
+        <!--Export PDF report-->
+        <Button
+            android:id="@+id/btnExportPdf"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:text="Export PDF Report"
+            android:background="@drawable/button_background"
+            android:textColor="@color/buttonText"
+            android:layout_marginTop="15dp"/>
+
+        <!-- Expense History -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Expense History"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/textPrimary"
+            android:layout_marginTop="20dp"/>
+
+        <ListView
+            android:id="@+id/listReports"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_marginTop="10dp"/>
+
+    </LinearLayout>
+
+</ScrollView>

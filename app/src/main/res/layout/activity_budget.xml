@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <!-- Header -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Budget Goals"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            android:textColor="@color/textPrimary" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Track your financial goals"
+            android:textColor="@color/textSecondary"
+            android:layout_marginBottom="20dp"/>
+
+        <!-- Summary Cards -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_weight="1"
+                android:layout_marginEnd="6dp"
+                android:background="@drawable/card_background"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:text="Budget"
+                    android:textColor="@color/textSecondary"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:id="@+id/tvBudgetLimit"
+                    android:text="R0"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/textPrimary"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_weight="1"
+                android:layout_marginHorizontal="3dp"
+                android:background="@drawable/card_background"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:text="Spent"
+                    android:textColor="@color/textSecondary"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:id="@+id/tvTotalSpent"
+                    android:text="R0"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/textPrimary"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_weight="1"
+                android:layout_marginStart="6dp"
+                android:background="@drawable/card_background"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:text="Remaining"
+                    android:textColor="@color/textSecondary"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:id="@+id/tvRemaining"
+                    android:text="R0"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/textPrimary"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- Progress -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/card_background"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:layout_marginTop="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Budget Progress"
+                android:textStyle="bold"
+                android:textColor="@color/textPrimary"/>
+
+            <ProgressBar
+                android:id="@+id/progressBudget"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:max="100"
+                android:progress="0"
+                android:layout_marginTop="10dp"/>
+
+            <TextView
+                android:id="@+id/tvProgress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0% Used"
+                android:textColor="@color/textSecondary"
+                android:layout_marginTop="8dp"/>
+
+        </LinearLayout>
+
+        <!-- Set Budget -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Set New Budget"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:textColor="@color/textPrimary"
+            android:layout_marginTop="24dp"/>
+
+        <EditText
+            android:id="@+id/etBudget"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="Enter budget amount"
+            android:inputType="numberDecimal"
+            android:background="@drawable/edittext_background"
+            android:layout_marginTop="10dp"/>
+
+        <Button
+            android:id="@+id/btnSaveBudget"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:text="Save Budget"
+            android:background="@drawable/button_background"
+            android:textColor="@color/buttonText"
+            android:layout_marginTop="15dp"/>
+
+    </LinearLayout>
+
+</ScrollView>

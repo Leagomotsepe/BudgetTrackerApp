@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Primary Colors -->
+    <color name="primary">#0F4C5C</color>
+    <color name="primaryDark">#0B3C49</color>
+    <color name="accent">#1BA098</color>
+
+    <!-- Background -->
+    <color name="background">#FFFFFF</color>
+    <color name="cardBackground">#F5F5F5</color>
+
+    <!-- Text -->
+    <color name="textPrimary">#1C1C1C</color>
+    <color name="textSecondary">#6E6E6E</color>
+
+    <!-- Buttons -->
+    <color name="buttonColor">#0F4C5C</color>
+    <color name="buttonText">#FFFFFF</color>
+
+</resources>
